@@ -1,0 +1,24 @@
+rectBlocks: sqrBaseRectBlocks.o cuboidBlocks.o cylindricalBlocks.o sphericalBlocks.o fileReader.o
+	g++ sqrBaseRectBlocks.o cuboidBlocks.o cylindricalBlocks.o sphericalBlocks.o fileReader.o -o rectBlocks
+
+sqrBaseRectBlocks.o: sqrBaseRectBlocks.cpp
+	g++ -c sqrBaseRectBlocks.cpp
+
+cuboidBlocks.o: cuboidBlocks.cpp
+	g++ -c cuboidBlocks.cpp
+
+cylindricalBlocks.o: cylindricalBlocks.cpp
+	g++ -c cylindricalBlocks.cpp
+
+sphericalBlocks: sphericalBlocks.cpp
+	g++ -c sphericalBlocks.cpp
+
+fileReader.o: fileReader.cpp
+	g++ -c fileReader.cpp
+
+clean:
+	rm *.o rectBlocks
+
+
+
+
